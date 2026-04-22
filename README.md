@@ -87,15 +87,17 @@ The cost efficiency page designed for finance teams monitoring spending against 
 - Actual vs Planned Cost by Region: clustered bar chart showing Cost Actual vs Cost Planned side by side for all 5 regions
 
 **Cost Variance Logic:**
-- Negative variance = underspend = favorable
-- Positive variance = overspend = unfavorable
+- Negative variance = underspend vs plan
+- Positive variance = overspend vs plan
+
+Note: underspend is not always favorable. It can reflect strong cost discipline but may also indicate underutilized budgets, delayed projects, or missed investment opportunities. Context matters when interpreting cost variance.
 
 **Key Insights:**
 - Cloud Solutions overspent by $191,787, the largest cost overrun by product line
 - Professional Services underspent by $91,399, the strongest cost efficiency by product line
 - North America overspent by $114,833 at the regional level
 - Latin America underspent by $44,021 at the regional level
-- Most regions tracked very closely to planned cost, indicating strong budget discipline overall
+- Most regions tracked very closely to planned cost, suggesting either strong budget discipline or conservative planning assumptions worth investigating further
 
 ---
 
