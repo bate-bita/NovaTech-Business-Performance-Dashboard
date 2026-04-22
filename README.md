@@ -168,10 +168,10 @@ SAC's gradient palette does not accept negative numbers in the color scale setti
 
 **Solution:** Created a calculated measure called CM_Variance_Index which divides Revenue Actual by Revenue Budget, producing values above 1.0 for above-budget performance and below 1.0 for below-budget performance. The final solution required shifting the midpoint position from 50% to 70% to compress the neutral zone and replacing the harsh red with a softer tone to maintain visual coherence while still communicating underperformance clearly.
 
-### Challenge 2: Month ordering in time series charts
-When using Month Label as a dimension in line charts, SAC sorted months alphabetically rather than chronologically, producing a nonsensical timeline showing Apr, Aug, Dec, Feb, Jan instead of Jan, Feb, Mar.
+### Challenge 2: **Month ordering in filter dropdown:**
+The month filter panel dropdown was sorting alphabetically rather than chronologically, displaying Apr, Aug, Dec, Feb, Jan instead of Jan, Feb, Mar.
 
-**Solution:** Solved this by manually reordering the Month dimension, to fit the proper calendar chronology.
+**Solution:** Manually reordered the Month dimension through the dimension filter settings in SAC to restore proper calendar chronology in the filter panel.
 
 ### Challenge 3: Dual axis chart with incompatible scales
 An attempt was made to layer Revenue and Gross Margin Percentage on a single dual axis line chart. While SAC supports dual axis charts technically, the visual result was unclear because revenue values in the millions and margin percentages in the forties appeared on incompatible scales that confused the narrative.
