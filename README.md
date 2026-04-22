@@ -169,24 +169,19 @@ SAC's gradient palette does not accept negative numbers in the color scale setti
 ### Challenge 2: Month ordering in time series charts
 When using Month Label as a dimension in line charts, SAC sorted months alphabetically rather than chronologically, producing a nonsensical timeline showing Apr, Aug, Dec, Feb, Jan instead of Jan, Feb, Mar.
 
-**Solution:** Replaced Month Label with the numeric Month dimension which SAC sorts correctly from 1 through 12. The X axis label was then renamed to Month for readability.
+**Solution:** Solved this by manually reordering the Month dimension, to fit the proper calendar chronology.
 
 ### Challenge 3: Dual axis chart with incompatible scales
 An attempt was made to layer Revenue and Gross Margin Percentage on a single dual axis line chart. While SAC supports dual axis charts technically, the visual result was unclear because revenue values in the millions and margin percentages in the forties appeared on incompatible scales that confused the narrative.
 
 **Solution:** Split into two separate focused charts. Two clean focused charts communicate more clearly than one overloaded chart.
 
-### Challenge 4: Y axis minimum value on margin trend chart
-The Gross Margin trend chart had significant empty space below the line because the Y axis defaulted to starting at 0% while all data points sit between 39% and 44%. SAC does not expose a minimum value override in the axis styling panel for this chart type.
-
-**Solution:** This limitation could not be resolved within SAC's current interface. The chart was accepted as is since the trend narrative remains clear. A workaround noted for future builds is to pre-calculate a scaled measure that compresses the range before import.
-
-### Challenge 5: Headcount aggregation error on scatter plot
+### Challenge 4: Headcount aggregation error on scatter plot
 When building the Cost vs Gross Margin scatter plot, the chart displayed values of 19, 25, 9, 11, and 33 instead of the expected millions-level cost figures. The chart was counting records rather than summing cost values due to residual configuration settings carried over from a previous bubble chart that used Headcount as its size measure.
 
 **Solution:** Deleted the chart entirely and rebuilt it from scratch without carrying over any previous configuration. The rebuilt chart correctly aggregated Cost Actual and Cost Planned as SUM measures and displayed accurate values in the tens of millions.
 
-### Challenge 6: Table chart configuration
+### Challenge 5: Table chart configuration
 SAC's table chart type requires dimensions in rows and measures in columns using a specific drag and drop workflow that is not immediately intuitive. Initial attempts produced a single cell table showing only a default measure.
 
 **Solution:** Replaced the table entirely with a grouped bar chart showing Quarterly Gross Profit Performance by year. This delivered the same quarterly comparison story in a more visually impactful format.
@@ -198,7 +193,7 @@ SAC's table chart type requires dimensions in rows and measures in columns using
 - **Platform:** SAP Analytics Cloud, Story Builder with Canvas layout
 - **Data Generation:** Python with CSV output, structured to match SAC Modeler requirements
 - **Modeler Setup:** Custom dimensions, semantic type assignments, calculated measures using RESTRICT style logic and arithmetic formulas
-- **Analytical Skills Demonstrated:** Actuals vs budget variance analysis, gross margin analysis, RAG performance framework, regional performance benchmarking, year-over-year trend analysis, customer movement tracking, executive dashboard design, cost efficiency analysis
+- **Analytical Skills Demonstrated:** Actuals vs budget variance analysis, gross margin analysis, RAG performance framework, regional performance benchmarking, year-over-year trend analysis, customer movement tracking, executive dashboard design, cost efficiency analysis.
 
 ---
 
