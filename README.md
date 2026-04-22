@@ -47,14 +47,14 @@ Revenue vs cost trend showing the profitability gap visually across 24 months. M
 
 ## Technical Challenges
 
-**Heatmap color scale with negative values**
+**Heatmap color scale with negative values:**
 SAC's gradient palette rejects negative numbers. Solved by creating CM_Variance_Index dividing actual by budget, producing positive values above and below 1.0. The midpoint position was then shifted to 70% through iterative experimentation to correctly map the color logic given SAC's relative rather than absolute scaling behavior.
 
-**Month ordering in charts**
-SAC sorted Month Label alphabetically. Solved by replacing with the numeric Month dimension.
+**Month ordering in charts:**
+SAC defaulted to sorting Month Label alphabetically. Solved this by manually reordering the Month dimension, to fit the proper calendar chronology.
 
 **Dual axis chart with incompatible scales**
-Layering revenue in millions and margin percentages on one chart produced a confusing visual. Solved by splitting into two focused charts.
+Layering revenue in millions and margin percentages on one chart produced a confusing visual. Solved this by splitting into two focused charts.
 
 **Y axis minimum override**
 SAC does not expose a minimum value setting for line chart axes in the styling panel. Accepted as a known platform limitation.
