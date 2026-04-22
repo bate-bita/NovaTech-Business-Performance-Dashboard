@@ -166,9 +166,9 @@ The dataset was generated using Python with realistic business logic including s
 ### Challenge 1: Heatmap color scale with negative values
 SAC's gradient palette does not accept negative numbers in the color scale settings. The goal was to show negative variance as red, near zero as neutral, and positive variance as green. Every attempt to input negative minimum values was rejected with an ascending order error.
 
-**Solution:** Created a calculated measure called CM_Variance_Index which divides Revenue Actual by Revenue Budget, producing values above 1.0 for above-budget performance and below 1.0 for below-budget performance. The final solution required shifting the midpoint position from 50% to 70% to compress the neutral zone and replacing the harsh red with a softer tone to maintain visual coherence while still communicating underperformance clearly.
+**Solution:** First attempted to solve this by creating a calculated measure called CM_Variance_Index dividing Revenue Actual by Revenue Budget to produce only positive values, but this did not fully resolve the color mapping issue. The final solution was to keep the variance percentage values directly and instead tweak the gradient color intervals, shift the midpoint position from 50% to 70% to compress the neutral zone, and replace the harsh red with a softer tone. This required iterative experimentation but produced a clean and accurate color scale that correctly communicates underperformance and outperformance across the heatmap.
 
-### Challenge 2: **Month ordering in filter dropdown:**
+### Challenge 2: Month ordering in filter dropdown
 The month filter panel dropdown was sorting alphabetically rather than chronologically, displaying Apr, Aug, Dec, Feb, Jan instead of Jan, Feb, Mar.
 
 **Solution:** Manually reordered the Month dimension through the dimension filter settings in SAC to restore proper calendar chronology in the filter panel.
