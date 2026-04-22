@@ -2,7 +2,6 @@
 
 A five page executive BI dashboard built from scratch in SAP Analytics Cloud, analyzing 24 months of fictional business performance data for NovaTech Solutions, a global technology company operating across 5 regions, 4 product lines, and 11 countries.
 
-📊 Built using the same enterprise platform used professionally at Airbus Defence and Space.
 
 ---
 
@@ -76,6 +75,8 @@ SAC does not expose a minimum value setting for line chart axes in the styling p
 
 ## Author
 
-👩🏽 **Bate Bita Tambe**
+**Bate Bita Tambe**
+
 Financial and Business Intelligence Analyst
+
 [LinkedIn](https://www.linkedin.com/in/bate-bita-tambe)
