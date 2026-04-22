@@ -1,116 +1,217 @@
 # NovaTech Business Performance Dashboard | SAP Analytics Cloud
 
-A five page executive BI dashboard built from scratch in SAP Analytics Cloud, analyzing 24 months of fictional business performance data for NovaTech Solutions, a global technology company operating across 5 regions, 4 product lines, and 11 countries.
+A five-page interactive executive business intelligence dashboard built from scratch in SAP Analytics Cloud (SAC), analyzing 24 months of fictional business performance data for a global technology company called NovaTech Solutions. The dashboard covers revenue, cost, gross profit, and customer movement across 5 regions, 4 product lines, and 11 countries from January 2023 to December 2024.
 
 ---
 
 ## Project Overview
 
-**Goal:** Build a multi page interactive executive dashboard that tells a complete business performance story from high level summary through revenue, cost, profitability, and year over year trend analysis.
+**Business Context:** NovaTech Solutions is a fictional global technology company operating across North America, Europe, Asia Pacific, Middle East and Africa, and Latin America. The dashboard was designed to mirror the kind of executive reporting tool a Financial or Business Intelligence Analyst would build and maintain in a real corporate environment.
 
-**Tool:** SAP Analytics Cloud (SAC), an enterprise BI platform used by major corporations worldwide.
+**Goal:** Build a five-page interactive executive dashboard that tells a coherent business performance story from high-level summary to regional drill-down to year-over-year trend analysis.
 
-**Dataset:** 480 rows of fictional business data generated in Python, covering January 2023 to December 2024.
+**Tool:** SAP Analytics Cloud (SAC), an enterprise business intelligence platform used by major corporations worldwide.
+
+**Dataset:** 480 rows of fictional business data generated in Python, covering 24 months across 5 regions, 4 product lines, and 12 product categories. All data is fictional and was purpose-built for this project.
 
 ---
 
 ## Dashboard Pages
 
-**Page 1: Executive Summary**
+### Page 1: Executive Summary
 
 ![Executive Summary](01-Executive%20Summary.png)
 
-Eight KPI tiles covering total gross profit, total revenue, and total cost each shown against planned figures, plus gross profit margin %, revenue variance %, cost variance %, new customers, and lost customers. Gross profit by region and product line. Revenue by RAG Status showing revenue distribution across Green, Amber, and Red performing records.
+The hero page designed for senior leadership. Answers the question: how is NovaTech performing overall?
 
-RAG Status thresholds based on revenue variance vs planned:
-- Green: greater than 3%
-- Amber: between -3% and 3%
-- Red: below -3%
+**KPI Tiles:**
+- Total Gross Profit: $68,660,740 vs planned $67,419,650
+- Total Revenue: $165,282,728 vs planned $163,947,020
+- Total Cost: $96,621,753 vs planned $96,527,197
+- Gross Profit Margin %: 41.54%
+- Revenue Variance %: 0.81%
+- Cost Variance %: 0.10%
+- New Customers: 3,957
+- Lost Customers: 1,272
+
+**Charts:**
+- Gross Profit by Region: horizontal bar chart showing North America as the strongest region at $23.6M
+- Gross Profit by Product Line: horizontal bar chart showing Cloud Solutions as the highest product line at $31.0M
+- Revenue by RAG Status: bar chart showing revenue split across Green, Amber and Red performing records
+
+**RAG Status Thresholds:**
+- Green: revenue variance greater than 3% vs planned
+- Amber: revenue variance between -3% and 3% vs planned
+- Red: revenue variance below -3% vs planned
+
+**Key Insights:**
+- Total revenue exceeded planned by 0.81% across both years
+- Cloud Solutions is the highest gross profit product line at $31.0M
+- North America dominates regional gross profit at $23.6M
+- Amber status holds the largest revenue share at $69.8M indicating most records sit in the watch-closely zone
+- Customer acquisition of 3,957 significantly outpaced customer loss of 1,272
 
 ---
 
-**Page 2: Revenue Performance Analysis**
+### Page 2: Revenue Performance Analysis
 
 ![Revenue Performance Analysis](02-Revenue%20Performance.png)
 
-Revenue variance heatmap by region and product line showing variance percentages color coded from red for underperformance to green for outperformance. Revenue variance by region and product line in USD. Revenue vs Gross Margin by Region scatter plot with Revenue Actual on the X axis, Gross Margin % on the Y axis, bubble size representing Headcount, and Region as color.
+The analytical depth page designed for managers investigating specific revenue performance gaps.
+
+**Charts:**
+- Revenue Variance Heatmap by Region and Product Line: a 4 by 5 grid showing variance percentages for every product line and region combination, color coded from red for underperformance to green for outperformance
+- Revenue Variance by Region: horizontal bar chart sorted descending showing which regions drove the most positive variance in USD
+- Revenue Variance by Product Line: horizontal bar chart showing which product lines drove the most positive variance in USD
+- Revenue vs Gross Margin by Region: bubble chart with Revenue Actual on the X axis, Gross Margin % on the Y axis, Headcount as bubble size, and Region as color
+
+**Key Insights:**
+- North America generated the highest positive revenue variance at $757,472
+- Latin America generated the lowest positive revenue variance at $23,941
+- North America Professional Services at 3.20% was the strongest outperformer in the heatmap
+- Hardware consistently underperformed across multiple regions
+- Data and Analytics drove the highest absolute revenue variance by product line at $469,812
 
 ---
 
-**Page 3: Cost Performance Analysis**
+### Page 3: Cost Performance Analysis
 
 ![Cost Performance Analysis](03-Cost%20Performance.png)
 
-Cost variance heatmap by region and product line. Cost variance by region and product line with diverging bar charts where negative values represent underspend which is favorable and positive values represent overspend which is unfavorable, reflecting standard financial reporting convention. Actual vs Planned Cost by Region clustered bar chart showing Cost Actual vs Cost Planned side by side for all five regions.
+The cost efficiency page designed for finance teams monitoring spending against plan.
+
+**Charts:**
+- Cost Variance Heatmap by Region and Product Line: a 4 by 5 grid showing cost variance percentages, color coded from red for overspend to green for underspend
+- Cost Variance by Region: diverging bar chart showing which regions overspent or underspent vs plan
+- Cost Variance by Product Line: diverging bar chart showing which product lines overspent or underspent vs plan
+- Actual vs Planned Cost by Region: clustered bar chart showing Cost Actual vs Cost Planned side by side for all 5 regions
+
+**Cost Variance Logic:**
+- Negative variance = underspend = favorable
+- Positive variance = overspend = unfavorable
+
+**Key Insights:**
+- Cloud Solutions overspent by $191,787, the largest cost overrun by product line
+- Professional Services underspent by $91,399, the strongest cost efficiency by product line
+- North America overspent by $114,833 at the regional level
+- Latin America underspent by $44,021 at the regional level
+- Most regions tracked very closely to planned cost, indicating strong budget discipline overall
 
 ---
 
-**Page 4: Profitability Performance Analysis**
+### Page 4: Profitability Performance Analysis
 
 ![Profitability Performance Analysis](04-Profitability%20Performance.png)
 
-Gross profit margin % heatmap across all region and product line combinations, all cells green reflecting healthy margins across the board. Gross profit by region and product line. Gross Profit vs Gross Margin by Region scatter plot with Gross Profit Actual on the X axis, Gross Margin % on the Y axis, bubble size representing Headcount, and Region as color.
+The margin analysis page showing how efficiently NovaTech converts revenue into profit across regions and product lines.
+
+**Charts:**
+- Gross Profit Margin % Heatmap by Region and Product Line: showing margin percentages for every combination, all cells in green indicating healthy margins across the board
+- Gross Profit by Region: horizontal bar chart showing North America at $23.6M
+- Gross Profit by Product Line: horizontal bar chart showing Cloud Solutions at $31.0M
+- Gross Profit vs Gross Margin by Region: bubble chart with Gross Profit Actual on the X axis, Gross Margin % on the Y axis, Headcount as bubble size, and Region as color
+
+**Key Insights:**
+- Cloud Solutions achieved the highest gross margin at 47-48% consistently across all regions
+- Hardware had the lowest gross margin at 27-29% reflecting physical product cost structures
+- North America generated the highest gross profit volume at $11M with approximately 45% margin
+- Latin America's challenge is revenue volume, not margin efficiency
+- Gross margins remained stable across all regions and product lines indicating consistent cost management
 
 ---
 
-**Page 5: Year Over Year Trends**
+### Page 5: Year Over Year Trends
 
 ![Year Over Year Trends](05-Year%20over%20Year%20Trends.png)
 
-Monthly Revenue vs Cost Trend 2023-2024 showing the profitability gap visually across 24 months. Monthly Cost Performance Actual vs Planned. Quarterly Gross Profit Performance 2023 vs 2024 grouped bar chart. Net Customer Movement by Month showing new customers vs lost customers across both years.
+The time series page showing how NovaTech performed over 24 months and whether the business improved year over year.
+
+**Charts:**
+- Monthly Revenue vs Cost Trend 2023-2024: line chart showing Revenue Actual and Cost Actual across all 24 months
+- Quarterly Gross Profit Performance 2023 vs 2024: grouped bar chart showing Q1 through Q4 side by side for both years
+- Monthly Cost Performance Actual vs Planned: line chart showing cost tracking against plan across 24 months
+- Net Customer Movement by Month: line chart showing new customers and lost customers each month across both years
+
+**Key Insights:**
+- Revenue grew consistently from 2023 to 2024 with Q4 2024 reaching $9.9M vs Q4 2023 at $8.7M
+- Every single quarter in 2024 outperformed the equivalent quarter in 2023
+- Cost tracked closely to plan across all 24 months indicating strong budget discipline
+- New customers consistently outnumbered lost customers in every single month across both years
+- July 2023 recorded the lowest net customer movement at 61, a notable dip worth investigating
+- Customer acquisition peaked in mid 2024 reaching 201 new customers in a single month
 
 ---
 
-## Key Business Insights
+## Dataset Structure
 
-- Total revenue of $165.3M exceeded planned by 0.81% with costs controlled at only 0.10% over planned
-- Cloud Solutions leads gross profit at $31.0M with a consistent 47-48% gross margin across all five regions
-- North America drives the highest gross profit at $23.6M
-- Latin America consistently underperforms on revenue volume but shows favorable cost control, its challenge is scale not efficiency
-- Hardware carries the lowest gross margin at 27-29% across all regions reflecting physical product cost structures
-- Gross margins remained stable between 39% and 44% across both years indicating consistent cost management
-- New customer acquisition of 3,957 outpaced customer loss of 1,272 in every single month across both years
-- Every quarter in 2024 outperformed the equivalent quarter in 2023
+The dataset was generated using Python with realistic business logic including seasonal patterns, year-over-year growth of 12%, and a natural distribution of performance outcomes.
+
+**Dimensions:** Date, Year, Month, Quarter, Region, Country, Product Line, Product Category, RAG Status, Currency
+
+**Measures:** Revenue Actual, Revenue Budget, Revenue Variance, Cost Actual, Cost Budget, Cost Variance, Gross Profit Actual, Gross Profit Budget, Gross Profit Variance, Gross Margin Actual %, Gross Margin Budget %, Headcount, New Customers, Lost Customers, Sales Rep Count
+
+**Calculated Measures built in SAC Modeler:**
+- CM_Revenue_Variance_Pct: Revenue Actual divided by Revenue Budget minus 1
+- CM_Cost_Variance_Pct: Cost Actual divided by Cost Budget minus 1
+- CM_Gross_Margin_Pct: Gross Profit Actual divided by Revenue Actual
+- CM_Net_Customer_Movement: New Customers minus Lost Customers
+- CM_Variance_Index: Revenue Actual divided by Revenue Budget, used for heatmap color scaling
 
 ---
 
-## Technical Challenges
+## Technical Challenges and How They Were Solved
 
-**Heatmap color scale with negative values:**
-SAC's gradient palette rejects negative numbers in the color scale settings. Solved by creating CM_Variance_Index dividing Revenue Actual by Revenue Budget, producing positive values above and below 1.0. The midpoint position was then shifted to 70% through iterative experimentation to correctly map the color logic given SAC's relative rather than absolute scaling behavior.
+### Challenge 1: Heatmap color scale with negative values
+SAC's gradient palette does not accept negative numbers in the color scale settings. The goal was to show negative variance as red, near zero as neutral, and positive variance as green. Every attempt to input negative minimum values was rejected with an ascending order error.
 
-**Month ordering in charts:**
-SAC defaulted to sorting Month Label alphabetically, producing a nonsensical timeline. Solved by replacing Month Label with the numeric Month dimension which SAC sorts correctly from 1 through 12. The axis label was then renamed to Month for readability.
+**Solution:** Created a calculated measure called CM_Variance_Index which divides Revenue Actual by Revenue Budget, producing values above 1.0 for above-budget performance and below 1.0 for below-budget performance. The final solution required shifting the midpoint position from 50% to 70% to compress the neutral zone and replacing the harsh red with a softer tone to maintain visual coherence while still communicating underperformance clearly.
 
-**Dual axis chart with incompatible scales:**
-Layering revenue in millions and margin percentages on one chart produced a confusing visual. Solved by splitting into two focused charts, one showing the Revenue vs Cost trend and one showing Monthly Cost Actual vs Planned.
+### Challenge 2: Month ordering in time series charts
+When using Month Label as a dimension in line charts, SAC sorted months alphabetically rather than chronologically, producing a nonsensical timeline showing Apr, Aug, Dec, Feb, Jan instead of Jan, Feb, Mar.
 
-**Y axis minimum override:**
-SAC does not expose a minimum value setting for line chart axes in the styling panel. The gross margin trend chart defaults to starting at 0% despite all data sitting between 39% and 44%. Accepted as a known platform limitation. A workaround noted for future builds is to pre-calculate a scaled measure that compresses the range before import.
+**Solution:** Replaced Month Label with the numeric Month dimension which SAC sorts correctly from 1 through 12. The X axis label was then renamed to Month for readability.
 
-**Headcount aggregation error on scatter plot:**
-When building the cost scatter plot, the chart displayed values of 19, 25, 9, 11, and 33 instead of the expected millions-level cost figures. The chart was counting records rather than summing cost values due to residual configuration settings carried over from a previous bubble chart that used Headcount as its size measure. Solved by deleting the chart entirely and rebuilding from scratch with clean configuration, which correctly aggregated Cost Actual and Cost Planned as SUM measures.
+### Challenge 3: Dual axis chart with incompatible scales
+An attempt was made to layer Revenue and Gross Margin Percentage on a single dual axis line chart. While SAC supports dual axis charts technically, the visual result was unclear because revenue values in the millions and margin percentages in the forties appeared on incompatible scales that confused the narrative.
 
-**Table chart configuration:**
-SAC's table chart type requires dimensions in rows and measures in columns using a specific drag and drop workflow that is not immediately intuitive. Initial attempts produced a single cell table. Solved by replacing the table with a grouped bar chart showing Quarterly Gross Profit Performance by year, which delivered the same story in a more visually impactful format.
+**Solution:** Split into two separate focused charts. Two clean focused charts communicate more clearly than one overloaded chart.
+
+### Challenge 4: Y axis minimum value on margin trend chart
+The Gross Margin trend chart had significant empty space below the line because the Y axis defaulted to starting at 0% while all data points sit between 39% and 44%. SAC does not expose a minimum value override in the axis styling panel for this chart type.
+
+**Solution:** This limitation could not be resolved within SAC's current interface. The chart was accepted as is since the trend narrative remains clear. A workaround noted for future builds is to pre-calculate a scaled measure that compresses the range before import.
+
+### Challenge 5: Headcount aggregation error on scatter plot
+When building the Cost vs Gross Margin scatter plot, the chart displayed values of 19, 25, 9, 11, and 33 instead of the expected millions-level cost figures. The chart was counting records rather than summing cost values due to residual configuration settings carried over from a previous bubble chart that used Headcount as its size measure.
+
+**Solution:** Deleted the chart entirely and rebuilt it from scratch without carrying over any previous configuration. The rebuilt chart correctly aggregated Cost Actual and Cost Planned as SUM measures and displayed accurate values in the tens of millions.
+
+### Challenge 6: Table chart configuration
+SAC's table chart type requires dimensions in rows and measures in columns using a specific drag and drop workflow that is not immediately intuitive. Initial attempts produced a single cell table showing only a default measure.
+
+**Solution:** Replaced the table entirely with a grouped bar chart showing Quarterly Gross Profit Performance by year. This delivered the same quarterly comparison story in a more visually impactful format.
 
 ---
 
 ## Tools and Techniques
 
-**Platform:** SAP Analytics Cloud, Story Builder, Canvas layout
+- **Platform:** SAP Analytics Cloud, Story Builder with Canvas layout
+- **Data Generation:** Python with CSV output, structured to match SAC Modeler requirements
+- **Modeler Setup:** Custom dimensions, semantic type assignments, calculated measures using RESTRICT style logic and arithmetic formulas
+- **Analytical Skills Demonstrated:** Actuals vs budget variance analysis, gross margin analysis, RAG performance framework, regional performance benchmarking, year-over-year trend analysis, customer movement tracking, executive dashboard design, cost efficiency analysis
 
-**Data:** Python generated CSV, 480 rows, 27 columns
+---
 
-**Modeler:** Custom dimensions, semantic types, calculated measures including variance percentage, gross margin, net customer movement, and variance index
+## Key Business Story
 
-**Skills:** Actuals vs planned analysis, gross margin analysis, cost variance monitoring, RAG framework, regional benchmarking, YoY trend analysis, executive dashboard design, cost efficiency analysis
+NovaTech Solutions delivered solid performance over the 2023 to 2024 period. Revenue exceeded planned by 0.81% overall, growing consistently quarter over quarter across both years. Cloud Solutions and Data and Analytics drove the highest revenue and margins. North America was the strongest region across revenue, cost efficiency, and gross profit while Latin America consistently underperformed on volume but not on margin efficiency. Gross margins remained stable between 39% and 44% throughout both years indicating healthy cost management despite revenue growth. Customer acquisition consistently outpaced customer loss in every single month across both years, and Cloud Solutions maintained gross margins of 47-48% across all five regions without exception.
 
 ---
 
 ## Author
 
 **Bate Bita Tambe**
-Financial and Business Intelligence Analyst
-[LinkedIn](https://www.linkedin.com/in/bate-bita-tambe) | [GitHub](https://github.com/bate-bita)
-```
+
+Financial and Business Intelligence Analyst  
+
+[LinkedIn](https://www.linkedin.com/in/bate-bita-tambe) 
