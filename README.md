@@ -14,7 +14,7 @@ A five-page interactive executive business intelligence dashboard built from scr
 
 **Dataset:** 480 rows of fictional business data generated in Python, covering 24 months across 5 regions, 4 product lines, and 12 product categories. All data is fictional and was purpose-built for this project. 
 
-Preview dataset: [NovaTech Solutions Company Data.csv](https://github.com/bate-bita/NovaTech-Business-Performance-Dashboard/blob/main/NovaTech%20Solutions%20Company%20Data.csv)
+Preview dataset: [`NovaTech Solutions Company Data.csv`](NovaTech%20Solutions%20Company%20Data.csv)
 
 ---
 
