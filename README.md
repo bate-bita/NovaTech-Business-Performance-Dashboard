@@ -207,8 +207,7 @@ NovaTech Solutions delivered solid performance over the 2023 to 2024 period. Rev
 
 ## Author
 
-**Bate Bita Tambe**
-
-Financial and Business Intelligence Analyst  
+**Bate Bita Tambe**  
+Data Analyst 
 
 [LinkedIn](https://www.linkedin.com/in/bate-bita-tambe) 
