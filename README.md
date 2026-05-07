@@ -20,7 +20,7 @@ A five-page interactive executive business intelligence dashboard built from scr
 
 ### Page 1: Executive Summary
 
-![Executive Summary](01-Executive%20Summary.png)
+![Executive Summary](NovaTech%20Power%20BI%20Screenshots/01-Executive%20Summary.png)
 
 The hero page designed for senior leadership. Answers the question: how is NovaTech performing overall?
 
@@ -55,7 +55,7 @@ The hero page designed for senior leadership. Answers the question: how is NovaT
 
 ### Page 2: Revenue Performance Analysis
 
-![Revenue Performance Analysis](02-Revenue%20Performance.png)
+![Revenue Performance Analysis](NovaTech%20Power%20BI%20Screenshots/02-Revenue%20Performance.png)
 
 The analytical depth page designed for managers investigating specific revenue performance gaps.
 
@@ -76,7 +76,7 @@ The analytical depth page designed for managers investigating specific revenue p
 
 ### Page 3: Cost Performance Analysis
 
-![Cost Performance Analysis](03-Cost%20Performance.png)
+![Cost Performance Analysis](NovaTech%20Power%20BI%20Screenshots/03-Cost%20Performance.png)
 
 The cost efficiency page designed for finance teams monitoring spending against plan.
 
@@ -103,7 +103,7 @@ Note: underspend is not always favorable. It can reflect strong cost discipline 
 
 ### Page 4: Profitability Performance Analysis
 
-![Profitability Performance Analysis](04-Profitability%20Performance.png)
+![Profitability Performance Analysis](NovaTech%20Power%20BI%20Screenshots/04-Profitability%20Performance.png)
 
 The margin analysis page showing how efficiently NovaTech converts revenue into profit across regions and product lines.
 
@@ -124,7 +124,7 @@ The margin analysis page showing how efficiently NovaTech converts revenue into 
 
 ### Page 5: Year Over Year Trends
 
-![Year Over Year Trends](05-Year%20over%20Year%20Trends.png)
+![Year Over Year Trends](NovaTech%20Power%20BI%20Screenshots/05-Year%20over%20Year%20Trends.png)
 
 The time series page showing how NovaTech performed over 24 months and whether the business improved year over year.
 
